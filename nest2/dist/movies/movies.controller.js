@@ -36,7 +36,7 @@ let MoviesController = class MoviesController {
         return this.movieService.deleteOne(movieId);
     }
     patch(movieId, updateData) {
-        return Object.assign({ updatedMovie: movieId }, updateData);
+        return this.movieService.update(movieId, updateData);
     }
 };
 __decorate([
